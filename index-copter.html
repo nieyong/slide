@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PPT for szlug about copter</title>
+
+		<meta name="description" content="For copter">
+		<meta name="author" content="nieyong">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ny.css" id="theme">
+		<!--
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		-->
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+    <section>
+	<h1>航模 & 航拍 <small>for Skypedia</small></h1>
+	<p style="padding-top:40px">聂勇｜<a href="https://github.com/nieyong" target="_blank">nieyong</a></p>
+	<p>陈晓｜<a href="https://github.com/Anyson" target="_blank">Anyson</a></p>
+	<div style="padding-left:40%;padding-top:80px">
+	    <a href="http://www.strikingly.com/skypediatech" target="_blank">公司简介 | </a>
+	    <a href="http://stat.skypedia.net/introduce/index.html" target="_blank">招聘PPT | </a>
+	    <a href="http://nieyong.github.com/" target="_blank">个人站点</a>
+	</div>
+    </section>
+
+    <section>
+	<h2>内容概述</h2>
+	<p>飞行器基本原理</p>
+	<p>多轴飞行器（Multi-Rotor Copter）</p>
+	<p>航拍（Aerial Photography）</p>
+    </section>
+
+    <section>
+	<h2>飞行器基本理论基础</h2>
+	<ul>
+	    <li>伯努利原理</li>
+	    <li>纳维－斯托克斯方程（Navier-Stokes equations，又叫做NS方程）</li>
+	</ul>
+    </section>
+
+    <section>
+	<h2>伯努利原理</h2>
+	<p>等高流动时，流速大，压力就小。</p>
+	<div>
+	    <img src="img-lug/bernoulli_1.png" height="40%"/>
+	    <img src="img-lug/bernoulli_2.png" height="40%"/>
+	</div>
+	
+	<q>题外话：上旋球／香蕉球</q>
+    </section>
+
+    <section>
+	<section>
+	    <h2>NS方程</h2>
+	    <img src="img-lug/ns.png"/>
+	</section>
+
+	<section>
+	    <p>NS方程是一组描述像液体和空气这样的流体物质的方程。这些方程建立了流体的粒子动量的改变率(加速度)和作用在液体内部的压力的变化和耗散粘滞力(类似于摩擦力)以及引力之间的关系。</p>
+	    <img src="img-lug/ns equation 02.png" width="75%"/>
+	</section>
+
+	<section>
+	    <p>处理厄尔尼诺全球性气象系统或机翼的升力等问题，NS方程的解必须借助计算机。这本身是一个科学领域，称为计算流体力学。</p>
+	<div>
+	    <img src="img-lug/ns equation 03.png" height="40%"/>
+	    <img src="img-lug/ns equation 01.png" height="40%"/>
+	</div>
+	</section>
+
+	<section>
+	    <img src="img-lug/plane.png" />
+		<p>Boeing 767-300ER</p>
+	</section>
+    </section>
+
+    <section>
+	<section>
+	    <h2>直升机--单桨机</h2>
+	    <p>单桨机：主桨＋竖尾桨。竖尾桨用于抵消主桨的旋转扭力，以及机头的转向。</p>
+	    <img src="img-lug/wuzhi10.jpg" width="60%"/>
+	    <p>国产武直10（珠海航展／2012年11月）</p>
+	</section>
+	    
+	<section>
+	    <h2>直升机--双桨机</h2>
+	    <p>双桨机：上桨＋下桨＋平尾桨。平尾桨用于飞机的前进和后退。</p>
+	    <img src="img-lug/shuangjiangji.jpeg" width="70%"/>
+	</section>
+
+	<section>
+	    <h2>二通／三通／三通半...</h2>
+	    <ul>
+		<li>二通：只能上下飞</li>
+		<li>三通：上下，前后，左右砖头</li>
+		<li>三通半：大家称为伪四通，添加两个侧桨实现侧飞</li>
+		<li>四通：上下、前后、左右转头、左右侧飞</li>
+		<li>...</li>
+	    </ul>
+	</section>
+    </section>
+
+    <section>
+	<h2>多轴飞行器的组成部分</h2>
+	<ul>
+	    <li>主控模块</li>
+		<ul>
+		    <li>传感器数据采集（加速度／角速度／GPS等）</li>
+		    <li>姿态控制算法</li>
+		</ul>
+	    <li>无刷电机/电调/电池/机架</li>
+	    <li>遥控器组件</li>
+		<ul>
+		    <li>遥控器，国内性价比高的是天地飞</li>
+		</ul>
+	</ul>
+    </section>
+
+    <section>
+	<section>
+	    <h2>主控模块（1）</h2>
+
+	    <p>开源的，DIY强的主控模块</p>
+	    <ul>
+		<li><a href="https://code.google.com/p/arducopter/">arducopter</a></li>
+		<li><a href="https://code.google.com/p/ardupilot/">ardupilot</a></li>
+	    </ul>
+
+	    <p>based on the Arduino open-source hardware platform</p>
+
+	    <div>
+		    <img src="img-lug/arduino.jpg" height="30%"/>
+		    <img src="img-lug/arducopter_pcb1.jpg" height="30%"/>
+	    </div>
+	</section>
+
+	<section>
+		<h2>Crazyflie</h2>
+		<p>open source nano quadcopter kit designed for flexible development and hacking by <a href="http://wiki.bitcraze.se/">Bitcraze</a>.</p>
+		<img src="img-lug/Crazyflie DIY Kit.jpg" width="60%"/>
+		<p>$173.0,First batch 300 kits,Second batch 500 kits,from <a href="http://www.seeedstudio.com/depot/preorder-crazyflie-nano-quadcopter-kit-10dof-with-crazyradio-bccfk02a-p-1365.html?cPath=170_172">seeed studio</a></p>
+	</section>
+
+
+	<section>
+	    <h2>主控模块（2）</h2>
+	    <p>商业公司开发的主控模块</p>
+	    <ul>
+		<li><a href="http://www.kkmulticopter.kr/">kkcopter（德国，DIY最强）</a></li>
+		<li><a href="http://www.zerouav.com/">零度智控</a></li>
+		<li><a href="http://www.dji-innovations.com/">DJI</a></li>
+	    </ul>
+
+	    <div>
+		<img src="img-lug/mc-dji.jpg" height="30%"/>
+		<img src="img-lug/mc-kk.jpg" height="30%"/>
+		<img src="img-lug/mc-ld.jpg" height="30%"/>
+	    </div>
+
+	    <p>题外话：固定翼／直升机</p>
+	</section>
+
+	<section>
+	    <h2>主控模块－技术核心</h2>
+	    <p>软件代码的核心</p>
+	    <ul>
+		<li>姿态控制算法</li>
+	    </ul>
+
+	    <p>硬件模块的核型</p>
+	    <ul>
+		<li>IMU（Inertial Measurement Unit）－惯性测量单元</li>
+		<ul>
+		    <li>gyroscope - 三轴陀螺仪（姿态）</li>
+		    <li>三轴加速度传感器（姿态）</li>
+		    <li>气压计（高度）</li>
+		    <li>磁场传感器（方向）</li>
+		    <li>GPS（位置）</li>
+		</ul>
+	    </ul>
+	</section>
+
+	<section>
+	    <h2>主控模块图片</h2>
+	    <p>以DJI公司开发的Wookong－M主控模块为例</p>
+	    <img src="img-lug/mc-dji.jpg" width="70%"/>
+	</section>
+    </section>
+
+<section>
+    <h2>电机／电调／电池／机架</h2>
+    <p>电调：全称为航模电子调速器，输入为直流＋3根信号线，输出为三相交流</p>
+    <p>电机旋转方向：机头朝上，从右上角开始，逆－顺－逆－顺，注意机桨的安装方向(伯努利原理)</p>
+    <div>
+	<img src="img-lug/acc-dt.gif" height="25%"/>
+	<img src="img-lug/acc-motor.jpg" height="25%"/>
+	<img src="img-lug/acc-frame.jpg" height="25%"/>
+    </div>
+</section>
+
+<section>
+    <h2>多轴一体机解决方案</h2>
+    <p>买回来只需要简单的组装，调试就可以使用。操控更加容易，危险性更小。</p>
+
+    <ul>
+        <li>AR.Drone（300$）</li>
+	<li><a href="http://www.kkmulticopter.kr/">kkcopter</a></li>
+        <li>Phantom</li>
+		<li>四轴飞行器（49$）</li>
+    </ul>
+
+    
+    <div>
+	    <img src="img-lug/multi-cheap.png" width="50%"/>
+    </div>
+</section>
+
+<section>
+<section>
+    <h2>航模&航拍</h2>
+    <p>多轴飞行器更稳定，好操控，多用于航拍。</p>
+    <p>直升机更加灵活，操控更加炫酷。</p>
+</section>
+
+
+<section>
+    <h2>航拍相机－GoPro</h2>
+    <a href="http://www.ifanr.com/257618">GoPro 运动相机：十年，从 30 美元到 22 亿</a>
+
+    <p>Phantom下面的GoPro云台</p>
+    <div>
+	    <img src="img-lug/gopro.jpg" width="50%"/> </div>
+</section>
+
+<section>
+    <div>
+	<img src="img-lug/hangpai1.jpg" width="100%"/>
+    </div>
+</section>
+</section>
+
+
+<section>
+    <h2>交流学习的途径</h2>
+    <p>网上站点／论坛</p>
+    <ul>
+		<li><a href="http://bbs.5imx.com/bbs/forum.php">5iMX论坛</a></li>
+		<li><a href="http://www.rcgroups.com/forums/index.php">RC Groups</a></li>
+		<li><a href="http://diydrones.com/">DIY Drones</a></li>
+		<li><a href="http://www.arduino.cc/">arduino</a></li>
+    </ul>
+</section>
+
+<section>
+	<p>There are so many who build their wealth by speculating, on property or food, yet so few who solve practical problems with the scientific knowledge and engineering skills acquired through hard work and constant learning. When the infrastructure providers garner profits by deployment of huge projects driven by capital, the genius and childhood dreams of engineers are stifled, their creativity suppressed by the superstructure run by those who may not even know technology.</p>
+	<p>It is our test, painstaking and tedious. It requires mastery of technology as well as the romanticism in a child as he gazes at the stars. When looked at from a child’s point of view, many complicated problems cease to be so. Innovation lies in a perfect combination of science and humanism.</p>
+</section>
+
+<section>
+    <p>这个世界通过投机、倒卖房地产和食品而致富的人太多，利用通过艰苦努力学习得到的科学知识和工程技巧解决实际问题的人太少。当那些大型通信设备垄断商，通过资本运作和千军万马式的工程密集型项目来聚敛巨额利润时，工程师的聪明才智和童年幻想正在被压榨而空，创造力不断的屈服于从上而下的制度之中，英雄仅仅是这种企业的顶层，甚至他自己都不一定懂技术。</p>
+	<p>我们要经历如此艰苦而枯燥的过程，所需要的不仅仅是扎实的技术，更需要那种如孩童仰望星空般的浪漫主义情怀。用一片童心来思考问题，很多烦难的问题就变得易解。创新的本质也就是在科学和人文的完美结合。</p>
+</section>
+
+<section>
+    <h2>Q&A</h2>
+</section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+
+	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	transition: Reveal.getQueryHash().transition || 'page', // default/cube/page/concave/zoom/linear/fade/none
+
+	// Optional libraries used to extend on reveal.js
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+	]
+    });
+
+</script>
+
+</body>
+</html>
