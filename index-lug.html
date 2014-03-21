@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PPT for szlug about copter</title>
+
+		<meta name="description" content="For copter">
+		<meta name="author" content="nieyong">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+		<!--
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		-->
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+    <section>
+	<h1>航模 & 航拍 <small>for SZLUG</small></h1>
+	<p style="padding-top:40px">聂勇｜<a href="https://github.com/nieyong" target="_blank">nieyong</a></p>
+	<p>陈晓｜<a href="https://github.com/Anyson" target="_blank">Anyson</a></p>
+	<div style="padding-left:40%;padding-top:80px">
+	    <a href="http://www.strikingly.com/skypediatech" target="_blank">公司简介 | </a>
+	    <a href="http://stat.skypedia.net/introduce/index.html" target="_blank">招聘PPT | </a>
+	    <a href="http://nieyong.github.com/" target="_blank">个人站点</a>
+	</div>
+    </section>
+
+    <section>
+	<h2>内容概述</h2>
+	<p>多轴飞行器（Multi-Rotor Copter） DIY</p>
+	<p>航拍（Aerial Photography）</p>
+	<p>关于我们</p>
+    </section>
+
+    <section>
+	<h2>DIY需要准备的器材</h2>
+	<ul>
+	    <li>主控模块</li>
+		<ul>
+		    <li>传感器数据采集（加速度／角速度／GPS等）</li>
+		    <li>姿态控制算法</li>
+		</ul>
+	    <li>无刷电机/电调/电池/机架</li>
+	    <li>遥控器组件</li>
+		<ul>
+		    <li>遥控器，国内性价比高的是天地飞</li>
+		    <li>遥控器无线信号接收模块</li>
+		</ul>
+	</ul>
+    </section>
+
+    <section>
+	<h2>主控模块（1）</h2>
+
+	<p>开源的，DIY强的主控模块</p>
+	<ul>
+	    <li><a href="https://code.google.com/p/arducopter/">arducopter</a></li>
+	    <li><a href="https://code.google.com/p/ardupilot/">ardupilot</a></li>
+	</ul>
+
+	<p>based on the Arduino open-source hardware platform</p>
+
+	<div>
+		<img src="img-lug/arduino.jpg" width="40%"/>
+		<img src="img-lug/arducopter_pcb1.jpg" width="50%"/>
+	</div>
+    </section>
+
+
+    <section>
+	<h2>主控模块（2）</h2>
+	<p>商业公司开发的主控模块</p>
+	<ul>
+	    <li><a href="http://www.kkmulticopter.kr/">kkcopter（德国，DIY最强）</a></li>
+	    <li><a href="http://www.zerouav.com/">零度智控</a></li>
+	    <li><a href="http://www.dji-innovations.com/">DJI</a></li>
+	</ul>
+
+	<div>
+	    <img src="img-lug/mc-dji.jpg" width="30%"/>
+	    <img src="img-lug/mc-kk.jpg" width="30%"/>
+	    <img src="img-lug/mc-ld.jpg" width="30%"/>
+	</div>
+
+	<p>题外话：固定翼／直升机</p>
+    </section>
+
+<section>
+    <h2>主控模块－技术核心</h2>
+    <p>软件代码的核心</p>
+    <ul>
+        <li>姿态控制算法</li>
+    </ul>
+
+    <p>硬件模块的核型</p>
+    <ul>
+	<li>IMU（Inertial Measurement Unit）－惯性测量单元</li>
+	<ul>
+	    <li>gyroscope - 三轴陀螺仪（姿态）</li>
+	    <li>三轴加速度传感器（姿态）</li>
+	    <li>气压计（高度）</li>
+	    <li>磁场传感器（方向）</li>
+	    <li>GPS（位置）</li>
+	</ul>
+    </ul>
+
+    <p>题外话：关于IMU，室内&室外</p>
+</section>
+
+<section>
+    <h2>主控模块图片</h2>
+    <p>以DJI公司开发的Wookong－M主控模块为例</p>
+    <img src="img-lug/mc-dji.jpg" width="70%"/>
+</section>
+
+<section>
+    <h2>电机／电调／电池／机架</h2>
+    <p>电调：全称为航模电子调速器，输入为直流＋3根信号线，输出为三相交流</p>
+    <div>
+	<img src="img-lug/acc-dt.gif" width="30%"/>
+	<img src="img-lug/acc-motor.jpg" width="30%"/>
+	<img src="img-lug/acc-frame.jpg" width="35%"/>
+    </div>
+</section>
+
+<section>
+    <h2>多轴一体机解决方案</h2>
+    <p>买回来只需要简单的组装，调试就可以使用。操控更加容易，危险性更小。</p>
+
+    <ul>
+        <li>AR.Drone（300$）</li>
+	<li><a href="http://www.kkmulticopter.kr/">kkcopter</a></li>
+        <li>Phantom</li>
+    </ul>
+
+    <p>题外话：49$四轴飞行器</p>
+    <div>
+	    <img src="img-lug/multi-cheap.png" width="50%"/>
+    </div>
+</section>
+
+<section>
+    <h2>航模&航拍</h2>
+    <p>多轴飞行器更稳定，好操控，多用于航拍。</p>
+    <p>直升机更加灵活，操控更加炫酷。</p>
+</section>
+
+
+<section>
+    <h2>航拍相机－GoPro</h2>
+    <a href="http://www.ifanr.com/257618">GoPro 运动相机：十年，从 30 美元到 22 亿</a>
+
+    <p>Phantom下面的GoPro云台</p>
+    <div>
+	    <img src="img-lug/gopro.jpg" width="50%"/> </div>
+</section>
+
+<section>
+    <h2>航拍的商业价值</h2>
+    <ul>
+        <li>电影／电视／宣传片</li>
+	<li>其他方面，例如婚礼</li>
+    </ul>
+</section>
+
+<section>
+    <h2>交流学习的途径</h2>
+    <p>网上站点／论坛</p>
+    <ul>
+	<li><a href="http://bbs.5imx.com/bbs/forum.php">5iMX论坛</a></li>
+	<li><a href="http://www.rcgroups.com/forums/index.php">RC Groups</a></li>
+	<li><a href="http://diydrones.com/">DIY Drones</a></li>
+	<li><a href="http://www.arduino.cc/">arduino</a></li>
+    </ul>
+
+    <p>线下的活动</p>
+    <ul>
+	<li>深圳湾体育馆草坪</li>
+    </ul>
+</section>
+
+
+<section>
+    <h2>我们的公司</h2>
+    <p>为合作伙伴DJI提供航模/航拍在移动智能设备上的软件服务。具体来说，有调参软件／地面站／DJeye三个App。</p>
+    <p>我们的开发平台为iOS／Android，使用蓝牙，wifi等技术来控制飞行器，接收航拍图片或视频。</p>
+    <div>
+	<img src="img-lug/product.png" class="svg" width="50%"/>
+    </div>
+</section>
+
+
+<section>
+    <h2>我们的邀请</h2>
+    <p>邀请玩航模的朋友，或者感兴趣的朋友，周末到我们公司玩航模。</p>
+    <p>邀请认可我们项目，对创业有激情的朋友加入我们，实习／兼职／全职我们都欢迎。</p>
+</section>
+
+<section>
+    <h2>我们的飞行器</h2>
+    <div>
+	    <img src="img-lug/copter.jpg" width="100%"/>
+    </div>
+</section>
+
+<section>
+    <h2>我们的办公室</h2>
+    <div>
+	    <img src="img-lug/office.jpg" width="100%"/>
+    </div>
+</section>
+
+<section>
+    <h2>Q&A</h2>
+</section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+
+	theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+	// Optional libraries used to extend on reveal.js
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+		// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+	]
+    });
+
+</script>
+
+</body>
+</html>
