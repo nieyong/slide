@@ -6,3 +6,4 @@ node_modules/
 .sass-cache
 *.swp
 session.vim
+_site/
