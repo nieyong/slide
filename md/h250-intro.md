@@ -32,7 +32,7 @@ Lumenier以FPV为切入点，推出多款机架
 
 
 ## QAV250(1)
-QAV250机架是Lumenier机架中最小的一款，也是最流行的。 官网QAV250[介绍](http://www.lumenier.com/products/multirotors/qav250)。
+QAV250机架是Lumenier机架中最小的一款，也是最流行的。 官网QAV250[介绍](http://www.lumenier.com/products/multirotors/qav250)
 
 <img src="assets/img/QAV250-Promo-banner.jpg" width="70%"/>
 
@@ -40,14 +40,14 @@ QAV250机架是Lumenier机架中最小的一款，也是最流行的。 官网QA
 
 
 ## QAV250(2)
-QAV250机架是国内所有仿制的H250机架的鼻祖。
+QAV250机架是国内所有仿制的H250机架的鼻祖
 
 <img src="assets/img/qav250-rtf-cf-built-front.jpg" width="70%"/>
 
 
 
 ## QAV250(3)
-QAV250机架提供的材料。注意分电板和Logo贴纸。
+QAV250机架提供的材料。分电板和Logo贴纸
 
 <img src="assets/img/parts-layout.jpg" width="70%"/>
 
@@ -55,7 +55,7 @@ QAV250机架提供的材料。注意分电板和Logo贴纸。
 
 ## immersionrc vortex
 
-immersion vortex机架，280大小，428美金一个，集成飞控图传等
+[immersionRC](http://www.immersionrc.com/)公司推出的Mini Racing Quad机架Vortex，280大小，428美金一个，集成飞控图传等
 
 <img src="assets/img/immersionrc-vortex-race-quad.jpg" width="70%"/>
 
@@ -66,6 +66,8 @@ immersion vortex机架，280大小，428美金一个，集成飞控图传等
 
 * 国外牛人穿越视频（树林）[优酷视频](http://v.youku.com/v_show/id_XODUxNTczOTY4.html)
 * H250夜晚/赛道模式（FPV air race）[优酷视频](http://v.youku.com/v_show/id_XODUyMDkzODk2.html)
+
+<img src="assets/img/fpv-racing.png" width="70%"/>
 
 
 
